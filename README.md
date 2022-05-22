@@ -32,7 +32,7 @@ npm run start
 * Click on an item in the inventory.
 * Add a deletion comment and click the `Trash` button.  
 
-### Restore Trashed Item
+### Restore Item
 * Click `Trash` on the navigation bar.
 * Click on an item in the trash.
 * Click the `Restore` button to restore the item to the inventory.
