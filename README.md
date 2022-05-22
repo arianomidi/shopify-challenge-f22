@@ -47,4 +47,4 @@ npm run start
 👤 **Arian Omidi**
 
 - Github: https://github.com/arianomidi
-- LinkedIn: https://linkedin.com/in/arianomidi
+- LinkedIn: https://linkedin.com/in/arian-omidi
