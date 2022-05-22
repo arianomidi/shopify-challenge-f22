@@ -63,7 +63,7 @@ const TrashItem = (props) => {
               <p>Title: {currentItem.title}</p>
               <p>Description: {currentItem.description}</p>
               <p>Price: ${currentItem.price}</p>
-              <p>Deletion Comment: {currentItem.deletionComment}</p>
+              <p>Deletion Comment: {currentItem.comment}</p>
             </div>
           )}
 

@@ -20,14 +20,14 @@ const Trash = () => {
   };
 
   const setActiveItem = (item, index) => {
-    const { title, description, price, deleted, deletionComment } = item.data();
+    const { title, description, price, deleted, comment } = item.data();
     setCurrentItem({
       id: item.id,
       title,
       description,
       price,
       deleted,
-      deletionComment
+      comment
     });
     setCurrentIndex(index);
   };

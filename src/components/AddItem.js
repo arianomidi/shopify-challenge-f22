@@ -30,7 +30,8 @@ const AddItem = () => {
       title: item.title,
       price: item.price,
       description: item.description,
-      deleted: false
+      deleted: false,
+      comment: ""
     };
     InventoryService.create(data)
       .then(() => {

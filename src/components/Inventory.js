@@ -20,12 +20,13 @@ const Inventory = () => {
   };
 
   const setActiveItem = (item, index) => {
-    const { title, description, price } = item.data();
+    const { title, description, price, comment } = item.data();
     setCurrentItem({
       id: item.id,
       title,
       description,
       price,
+      comment
     });
     setCurrentIndex(index);
   };

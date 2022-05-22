@@ -21,15 +21,17 @@ const update = (id, value) => {
   });
 };
 
-const trash = (id) => {
+const trash = (id, comment) => {
   return updateDoc(doc(inventoryRef, id), {
-    deleted: true
+    deleted: true,
+    comment
   });
 };
 
 const restore = (id) => {
   return updateDoc(doc(inventoryRef, id), {
-    deleted: false
+    deleted: false,
+    comment: ""
   });
 };
 

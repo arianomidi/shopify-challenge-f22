@@ -9,6 +9,7 @@ const Item = (props) => {
     title: "",
     description: "",
     price: 0,
+    comment: "",
   };
 
   /* ====== STATES ====== */
@@ -27,7 +28,7 @@ const Item = (props) => {
     const data = {
       title: currentItem.title,
       description: currentItem.description,
-      price: currentItem.price
+      price: currentItem.price,
     };
     InventoryService.update(currentItem.id, data)
       .then(() => {
@@ -39,7 +40,7 @@ const Item = (props) => {
   };
 
   const trashItem = () => {
-    InventoryService.trash(currentItem.id)
+    InventoryService.trash(currentItem.id, currentItem.comment)
       .then(() => {
         props.refreshList();
       })
@@ -97,9 +98,6 @@ const Item = (props) => {
               />
             </div>
           </form>
-          <button className="badge bg-danger mr-2" onClick={trashItem}>
-            Trash
-          </button>
           <button
             type="submit"
             className="badge bg-success"
@@ -108,6 +106,23 @@ const Item = (props) => {
             Update
           </button>
           <p>{message}</p>
+
+          <form>
+            <div className="form-group">
+              <label htmlFor="comment">Deletion Comment</label>
+              <input
+                type="text"
+                className="form-control"
+                id="comment"
+                name="comment"
+                value={currentItem.comment}
+                onChange={handleInputChange}
+              />
+            </div>
+          </form>
+          <button className="badge bg-danger mr-2" onClick={trashItem}>
+            Trash
+          </button>
         </div>
       ) : (
         <div>
